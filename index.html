@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container-pnl">
+        <div class="wrap-pnl grid grid-cols-2">
+            <span class="pnl-form-title">Profit and Loss</span>
+
+            <form class="pnl-form relative" action="">
+                
+                <div class="wrap-input">
+                    <span class="label-input">Exit Price</span>
+                    <input type="text" id="sellingPrice" class="input"
+                    placeholder="Enter Selling or Exit price">
+                </div>
+                <div class="wrap-input">
+                    <span class="label-input">Entry Price</span>
+                    <input type="text" id="buyingPrice" class="input"
+                    placeholder="Enter Buying or Entry Price">
+                </div>
+                <div class="wrap-input">
+                    <span class="label-input">Leverage</span>
+                    <input type="text" id="leverage" class="input"
+                    placeholder="Enter Leverage">
+                </div>
+                <div class="wrap-input">
+                    <span class="label-input">Amount Invested</span>
+
+                    <input type="text" id="amount" class="input"
+                    placeholder="Enter Amount Invested">
+                </div>
+                
+                <br>
+                
+                
+                <div class="container-pnl-form-btn relative">
+                    <button type="button" id="add-button" class="pnl-form-btn">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- <div class="container-pnl-output">
+                <span class="label-input"> Output</span>
+                <output id = "profit" class="pnl-output">0</output>
+            </div> -->
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
