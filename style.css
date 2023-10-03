@@ -16,22 +16,20 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+  
     background-color:  rgb(24, 26, 27);
 }
-
-.wrap-pnl{
-    width: 920px;
-    background-color: rgb(24, 26, 27);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 62px 55px 90px;
+.wrapper{
+    display: flex;
+    gap: 5rem;
+    width: 80%;
+    
 }
 
 .pnl-form{
-    width: 100%;
+    width: 60%;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -45,11 +43,11 @@ body{
     line-height: 1.2;
     text-align: center;
     color: rgb(200, 195, 188);
-    padding-bottom: 59px
+  
 }
 
 .wrap-input{
-    width: 100%;
+    
     position: relative;
     border: 1px solid #e6e6e6;
     border-radius: 13px;
@@ -85,13 +83,7 @@ input{
     height: 40px;
 }
 
-.container-pnl-form-btn{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
-    width: 100%;
-}
+
 
 .pnl-form-btn{
     display: flex;
@@ -111,6 +103,50 @@ input{
     
 }
 
+.container-pnl-form-btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.container-pnl-output{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.output-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #e6e6e6;
+    font-size: 30px;
+    padding-bottom: 1rem;
+}
+
+.label-output-value{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.label-output-not{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.label-output{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+
 @media(max-width: 576px) {
     .wrap-pnl {
         padding:62px 15px 90px
@@ -118,5 +154,19 @@ input{
 
     .wrap-input {
         padding: 10px 10px 9px
+    }
+
+    .wrapper{
+        flex-direction: column;
+    }
+    .pnl-form{
+        width: 100%;
+    }
+
+    .container-pnl-output{
+        width: 100%;
+    }
+    .pnl-form-title{
+        padding-bottom: 59px;
     }
 }
