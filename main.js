@@ -37,11 +37,12 @@ function calculateRoe(){
 }
 
 
-
-
 calButton.addEventListener("click", calculateProfit);
 calButton.addEventListener("click", calculateMargin);
 calButton.addEventListener("click", calculateQuantity);
 calButton.addEventListener("click", calculateRoe);
+
+
+
 
 
