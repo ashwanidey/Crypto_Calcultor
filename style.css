@@ -1,4 +1,5 @@
 
+
 body{
     background-color: rgb(24, 26, 27);
     /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */
@@ -146,8 +147,11 @@ input{
     color: white;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
-@media(max-width: 576px) {
+@media(max-width: 640px) {
     .wrap-pnl {
         padding:62px 15px 90px
     }
