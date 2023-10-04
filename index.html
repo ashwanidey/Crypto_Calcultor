@@ -12,10 +12,11 @@
 </head>
 <body>
     <div class="container-pnl">
-        <div class="wrap-pnl grid grid-cols-2">
+        
             <span class="pnl-form-title">Profit and Loss</span>
+            <div class="wrapper">
 
-            <form class="pnl-form relative" action="">
+            <form class="pnl-form" action="">
                 
                 <div class="wrap-input">
                     <span class="label-input">Exit Price</span>
@@ -41,7 +42,6 @@
                 
                 <br>
                 
-                
                 <div class="container-pnl-form-btn relative">
                     <button type="button" id="add-button" class="pnl-form-btn">
                         <span>Submit</span>
@@ -49,10 +49,31 @@
                 </div>
             </form>
 
-            <!-- <div class="container-pnl-output">
-                <span class="label-input"> Output</span>
-                <output id = "profit" class="pnl-output">0</output>
-            </div> -->
+            <div class="container-pnl-output">
+                <span class="output-heading">Result</span>
+                <div class="output-box">
+                    <span class="label-output">Initial Margin</span>
+                    <output id="margin" class="label-output-value">0</output>
+                    <span class="label-output-not">USD</span>
+                </div >
+                <div class="output-pnl-box">
+                    <span class="label-output"> PNL</span>
+                    <output id = "pnl" class="label-output-value">0</output>
+                    <span class="label-output-not">USD</span>
+                </div>
+                <div>
+                    <span class="label-output">ROE</span>
+                    <output id="roe" class="label-output-value">0</output>;
+                </div>
+                <div>
+                    <span class="label-output">Quantity</span>
+                    <output id="quantity" class="label-output-value"> 0</output>
+                    <span class="label-output-not">%</span>
+                </div>
+                
+
+            </div>
+
         </div>
     </div>
     
