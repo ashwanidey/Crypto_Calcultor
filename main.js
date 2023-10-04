@@ -45,4 +45,113 @@ calButton.addEventListener("click", calculateRoe);
 
 
 
+var pnlDiv = document.getElementById('pnl-toogle');
+var targetPriceDiv = document.getElementById('target-price-toogle');
+var liquidationPriceDiv = document.getElementById('liquidation-price-toogle');
+var maxOpenDiv = document.getElementById('max-open-toogle');
+var openPriceDiv = document.getElementById('open-price-toogle');
+
+document.getElementById('pnl-tag').addEventListener('click', function() {
+    if (pnlDiv.style.display === 'none' || pnlDiv.style.display === '') {
+        pnlDiv.style.display = 'flex';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('target-price-tag').addEventListener('click', function() {
+    if (targetPriceDiv.style.display === 'none' || targetPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'flex';
+    } 
+  });
+
+  document.getElementById('liquidation-price-tag').addEventListener('click', function() {
+    if (liquidationPriceDiv.style.display === 'none' || liquidationPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'flex';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('max-open-tag').addEventListener('click', function() {
+    if (maxOpenDiv.style.display === 'none' || maxOpenDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'flex'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('open-price-tag').addEventListener('click', function() {
+    if (openPriceDiv.style.display === 'none' || openPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'flex'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('pnl-tag1').addEventListener('click', function() {
+    if (pnlDiv.style.display === 'none' || pnlDiv.style.display === '') {
+        pnlDiv.style.display = 'flex';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('target-price-tag1').addEventListener('click', function() {
+    if (targetPriceDiv.style.display === 'none' || targetPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'flex';
+    } 
+  });
+
+  document.getElementById('liquidation-price-tag1').addEventListener('click', function() {
+    if (liquidationPriceDiv.style.display === 'none' || liquidationPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'flex';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('max-open-tag1').addEventListener('click', function() {
+    if (maxOpenDiv.style.display === 'none' || maxOpenDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'flex'
+        openPriceDiv.style.display = 'none'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+document.getElementById('open-price-tag1').addEventListener('click', function() {
+    if (openPriceDiv.style.display === 'none' || openPriceDiv.style.display === '') {
+        pnlDiv.style.display = 'none';
+        liquidationPriceDiv.style.display = 'none';
+        maxOpenDiv.style.display = 'none'
+        openPriceDiv.style.display = 'flex'
+        targetPriceDiv.style.display = 'none';
+    } 
+});
+
+  
+  
+
 

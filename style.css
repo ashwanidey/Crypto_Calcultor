@@ -11,15 +11,16 @@ body{
 }
 
 .container-pnl{
+    
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
     background-color:  rgb(24, 26, 27);
 }
+
 .wrapper{
     display: flex;
     gap: 5rem;
@@ -149,6 +150,44 @@ input{
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.container-target-price{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(24, 26, 27);
+}
+
+.container-liquidation-price{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(24, 26, 27);
+}
+.container-max-open{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(24, 26, 27);
+}
+.container-open-price{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgb(24, 26, 27);
 }
 
 @media(max-width: 640px) {
