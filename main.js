@@ -7,7 +7,10 @@ var profit = document.getElementById('pnl');
 var margin = document.getElementById('margin');
 var roe = document.getElementById('roe');
 var quantityOfcoin = document.getElementById('quantity');
-var lev = 0;
+var lev;
+
+
+
 
 
 // Slider
@@ -59,41 +62,89 @@ long.addEventListener('click', function () {
 function calculateQuantity(){
     console.log(lev);
     var quantity = (amt.value* lev)/bp.value;
-    quantityOfcoin.value = quantity.toFixed(3);
+    if(Number.isFinite(quantity)){
+        quantityOfcoin.value= quantity.toFixed(2); 
+        return quantity;
+    }else{
+        quantityOfcoin.value = 0;
+    }
+    
   
 }
 function calculateProfit(){
     var quantity = (amt.value* lev)/bp.value;
     if(short.style.backgroundColor === 'red'){
-        p = (bp.value- sp.value) * quantity.toFixed(3);
-        profit.value = p; 
-        return p;
+        var p = (bp.value- sp.value) * quantity.toFixed(2);
+        if(Number.isFinite(p)){
+            profit.value = p.toFixed(2); 
+            return p;
+        }else{
+            profit.value = "0.00";
+        }
+        
     }
     else {
-        p = (sp.value- bp.value) * quantity.toFixed(3);
-        profit.value = p; 
-        return p;
+        var p = (sp.value - bp.value) * quantity.toFixed(2);
+        if(Number.isFinite(p)){
+            profit.value = p.toFixed(2); 
+            return p;
+        }else{
+            profit.value = "0.00";
+        }
+        
     }
 }
 
 function calculateMargin(){
     var quantity = (amt.value* lev)/bp.value;
-    const totalValueOfTrade = bp.value * quantity.toFixed(3);
+    const totalValueOfTrade = bp.value * quantity.toFixed(2);
     const initialMargin = totalValueOfTrade / lev;
-    margin.value = initialMargin;
-    return initialMargin;
+    if(!Number.isNaN(initialMargin)){
+        margin.value = initialMargin.toFixed(2);
+        return initialMargin;
+    }else{
+        margin.value = "-";
+    }
 }
 
 function calculateRoe(){
     var ROE = calculateProfit()/calculateMargin() *100;
-    roe.value = ROE.toFixed(1);
+    if(!Number.isNaN(ROE)){
+        roe.value = ROE.toFixed(1);
+    }
+    
+}
+
+sp.addEventListener('input', validateInputs);
+bp.addEventListener('input', validateInputs);
+amt.addEventListener('input', validateInputs);
+
+function validateInputs() {
+    // Check if both input fields have a value
+    const isInput1Filled = bp.value.trim() !== '';
+    const isInput2Filled = sp.value.trim() !== '';
+    const isInput3Filled = amt.value.trim() !== '';
+
+    // Enable/disable the submit button based on the conditions
+    if(isInput1Filled && isInput2Filled && isInput3Filled){
+        calButton.addEventListener("click", calculateProfit);
+        calButton.addEventListener("click", calculateMargin);
+        calButton.addEventListener("click", calculateQuantity);
+        calButton.addEventListener("click", calculateRoe);
+    }
+    
 }
 
 
-calButton.addEventListener("click", calculateProfit);
-calButton.addEventListener("click", calculateMargin);
-calButton.addEventListener("click", calculateQuantity);
-calButton.addEventListener("click", calculateRoe);
+function isNumberKey(event) {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        event.preventDefault();
+        return false;
+    }
+    return true;
+}
+
 
 
 

@@ -108,7 +108,7 @@
             <div class="wrapper">
                 
 
-            <form class="pnl-form" action="">
+            <form class="pnl-form" action="" >
 
                 <div class="container-position-setter">
                     <div id="long-button" class="button-28" role="button">LONG</div>
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="range-slider" id="leverage">
-                    <input type="range" min="0" max="125" value="20" 
+                    <input type="range" min="1" max="125" value="20" 
                      class="slider">
                     
                     <div class="slider-thumb">
@@ -129,26 +129,26 @@
                 <div class="wrap-input">
                     <span class="label-input">Exit Price</span>
                     <input type="text" id="sellingPrice" class="input"
-                    placeholder="Enter Selling or Exit price">
+                    placeholder="Enter Selling or Exit price" onkeypress="return isNumberKey(event)">
                 </div>
                 <div class="wrap-input">
                     <span class="label-input">Entry Price</span>
                     <input type="text" id="buyingPrice" class="input"
-                    placeholder="Enter Buying or Entry Price">
+                    placeholder="Enter Buying or Entry Price" onkeypress="return isNumberKey(event)">
                 </div>
                 
                 <div class="wrap-input">
                     <span class="label-input">Amount Invested</span>
 
                     <input type="text" id="amount" class="input"
-                    placeholder="Enter Amount Invested">
+                    placeholder="Enter Amount Invested" onkeypress="return isNumberKey(event)">
                 </div>
                 
                 <br>
                 
                 <div class="container-pnl-form-btn relative">
-                    <div id="add-button" class="button-81">
-                        <span>Submit</span>
+                    <div id="add-button" class="button-81" >
+                        CALCULATE
                     </div>
                 </div>
             </form>
@@ -157,21 +157,21 @@
                 <span class="output-heading">Result</span>
                 <div class="output-box">
                     <span class="label-output">Initial Margin</span>
-                    <output id="margin" class="label-output-value">0</output>
+                    <output id="margin" class="label-output-value">0.00</output>
                     <span class="label-output-not">USD</span>
                 </div >
                 <div class="output-pnl-box">
                     <span class="label-output"> PNL</span>
-                    <output id = "pnl" class="label-output-value">0</output>
+                    <output id = "pnl" class="label-output-value">0.00</output>
                     <span class="label-output-not">USD</span>
                 </div>
                 <div>
                     <span class="label-output">ROE</span>
-                    <output id="roe" class="label-output-value">0</output>;
+                    <output id="roe" class="label-output-value">-</output>;
                 </div>
                 <div>
                     <span class="label-output">Quantity</span>
-                    <output id="quantity" class="label-output-value"> 0</output>
+                    <output id="quantity" class="label-output-value"> 0.000</output>
                     <span class="label-output-not">%</span>
                 </div>
                 
