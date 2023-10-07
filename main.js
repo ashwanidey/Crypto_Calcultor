@@ -1,22 +1,52 @@
 var sp = document.getElementById('sellingPrice');
 var bp = document.getElementById('buyingPrice');
-var lev = document.getElementById('leverage');
+
 var amt = document.getElementById('amount');
 var calButton = document.getElementById('add-button');
 var profit = document.getElementById('pnl');
 var margin = document.getElementById('margin');
 var roe = document.getElementById('roe');
 var quantityOfcoin = document.getElementById('quantity');
+var lev = 0;
+
+
+// Slider
+const container = document.querySelectorAll(".range-slider");
+const slider = document.querySelector(".slider");
+const thumb = document.querySelector(".slider-thumb");
+const tooltip = document.querySelector(".tooltip");
+const progress = document.querySelector(".progress");
+  
+
+function customSlider(){
+    const maxVal = slider.getAttribute("max");
+    const val = (slider.value / maxVal) * 100 + "%";
+
+    tooltip.innerHTML = slider.value;
+    progress.style.width = val;
+    thumb.style.left = val;
+    lev = slider.value;
+}
+
+customSlider();
+
+
+slider.addEventListener("input",()=>{
+    customSlider();
+})
+
+
 
 
 
 function calculateQuantity(){
-    var quantity = (amt.value* lev.value)/bp.value;
+    console.log(lev);
+    var quantity = (amt.value* lev)/bp.value;
     quantityOfcoin.value = quantity.toFixed(3);
   
 }
 function calculateProfit(){
-    var quantity = (amt.value* lev.value)/bp.value;
+    var quantity = (amt.value* lev)/bp.value;
     p = (sp.value- bp.value) * quantity.toFixed(3);
     profit.value = p; 
     return p;
@@ -24,9 +54,9 @@ function calculateProfit(){
 }
 
 function calculateMargin(){
-    var quantity = (amt.value* lev.value)/bp.value;
+    var quantity = (amt.value* lev)/bp.value;
     const totalValueOfTrade = bp.value * quantity.toFixed(3);
-    const initialMargin = totalValueOfTrade / lev.value;
+    const initialMargin = totalValueOfTrade / lev;
     margin.value = initialMargin;
     return initialMargin;
 }
@@ -151,7 +181,6 @@ document.getElementById('open-price-tag1').addEventListener('click', function() 
     } 
 });
 
-  
-  
+
 
 

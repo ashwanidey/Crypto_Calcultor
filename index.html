@@ -102,12 +102,24 @@
         
     
 
-    <div class="container-pnl pt-10 hide" id="pnl-toogle">
+    <div class="container-pnl pt-10 " id="pnl-toogle">
         
             <span class="pnl-form-title">Profit and Loss</span>
             <div class="wrapper">
+                
 
             <form class="pnl-form" action="">
+
+                <div class="range-slider" id="leverage">
+                    <input type="range" min="0" max="125" value="0" 
+                     class="slider">
+                    
+                    <div class="slider-thumb">
+                        <div class="tooltip"></div>
+                    </div>
+                    <div class="progress"></div>
+                </div>
+
                 
                 <div class="wrap-input">
                     <span class="label-input">Exit Price</span>
@@ -119,11 +131,7 @@
                     <input type="text" id="buyingPrice" class="input"
                     placeholder="Enter Buying or Entry Price">
                 </div>
-                <div class="wrap-input">
-                    <span class="label-input">Leverage</span>
-                    <input type="text" id="leverage" class="input"
-                    placeholder="Enter Leverage">
-                </div>
+                
                 <div class="wrap-input">
                     <span class="label-input">Amount Invested</span>
 

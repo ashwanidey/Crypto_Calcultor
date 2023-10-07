@@ -24,7 +24,7 @@ body{
 .wrapper{
     display: flex;
     gap: 5rem;
-    width: 80%;
+    width: 90%;
     
 }
 
@@ -190,7 +190,120 @@ input{
     background-color:  rgb(24, 26, 27);
 }
 
+
+/* Range Slider */
+
+
+
+  .range-slider{
+    
+    width: 100%;
+    margin: 2em auto;
+    position: relative;
+    display: flex;
+  }
+
+  .range-slider .slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.4em;
+    outline: none;
+    border-radius: 3px;
+    background: black;
+    box-shadow: 3px 3px 6px #000, inset 1px 1px 1px #909090;
+}
+
+.range-slider .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1.7em;
+    height: 1.7em;
+    cursor: pointer;
+    z-index:3;
+    position: relative;
+}
+
+.range-slider .slider-thumb{
+    position: absolute;
+    width: 1.7em;
+    height: 1.7em;
+    background: #090909;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    box-shadow: inset 0px 1px 2px #090909;
+}
+
+.range-slider .slider-thumb::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0.7em;
+    height: 0.7em;
+    background:#333;
+    border-radius:inherit;
+    transition:0.3s;
+}
+
+.range-slider:hover .slider-thumb::before{
+    background:#2ae9c9 ;
+}
+
+.range-slider .tooltip{
+    position: absolute;
+    width: 2.8em;
+    height: 2em;
+    left: 50%;
+    top: -2em;
+    transform: translate(-50%,-50%);
+    background:#090909;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow :
+    0px 3px 10px #1f1f1f, inset 0px 1px 2px #090909;
+}
+
+.range-slider .tooltip::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #090909;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.range-slider .progress{
+    width: 0%;
+    height: 0.4em;
+    border-radius: 3px;
+    background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events: none;
+}
+
+
+
+
+
+
 @media(max-width: 640px) {
+    .neu-range-slider{
+        width: 100%;
+    }
+
     .wrap-pnl {
         padding:62px 15px 90px
     }
