@@ -112,6 +112,9 @@ function calculateRoe(){
     if(!Number.isNaN(ROE)){
         roe.value = ROE.toFixed(1);
     }
+    else{
+        roe.value = "-";
+    }
     
 }
 

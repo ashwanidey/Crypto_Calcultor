@@ -1,13 +1,22 @@
 
 
+
 body{
-    background-color: rgb(24, 26, 27);
-    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; */
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+  --card-box-shadow-1-y: 3px;
+  --card-box-shadow-1-blur: 6px;
+  --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+  --card-box-shadow-2-y: 8px;
+  --card-box-shadow-2-blur: 15px;
+    
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     overflow-x: hidden;
+    background: #18181B;
+
 }
 
 .container-pnl{
@@ -18,7 +27,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color:  rgb(24, 26, 27);
+    
+    
 }
 
 .wrapper{
@@ -44,17 +54,18 @@ body{
     font-weight: 900;
     line-height: 1.2;
     text-align: center;
-    color: rgb(200, 195, 188);
+    color: white;
   
 }
 
 .wrap-input{
-    
+    background: rgba(255, 255, 255, .015);
     position: relative;
-    border: 1px solid #e6e6e6;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 13px;
     padding: 10px 30px 9px 22px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1), 0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2), 0 0 0 1px var(--card-border-color);
 }
 
 .label-input{
@@ -90,18 +101,43 @@ input{
 
 
 
-
 .container-pnl-output{
     width: 50%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    background-clip: padding-box;
+    border-radius: 45px;
+    padding: 40px;
+    margin-bottom: 32px;
+   
     
 }
+
+
+.bg-blue-box {
+  position: relative;
+}
+
+
+.bg-blue-box::after {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    z-index: -1;
+    border-radius: 45px;
+    background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+  }
 
 .output-heading{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    color: #e6e6e6;
+    color: white;
     font-size: 30px;
     padding-bottom: 1rem;
 }
@@ -392,12 +428,19 @@ input{
         width: 100%;
     }
 
+    .pnl-form-title{
+        margin-top: -0.4em;
+        margin-bottom: -0.7em;
+    }
+
     .wrap-pnl {
         padding:62px 15px 90px
     }
 
     .wrap-input {
-        padding: 10px 10px 9px
+        padding: 9px 9px 9px;
+        margin-bottom: 10px;
+        
     }
 
     .wrapper{
@@ -409,8 +452,12 @@ input{
 
     .container-pnl-output{
         width: 100%;
+        margin-top: -3em;
     }
     .pnl-form-title{
         padding-bottom: 59px;
+    }
+    .button-81{
+        margin-top: -4em;
     }
 }
