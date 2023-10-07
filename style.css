@@ -1,5 +1,4 @@
-
-
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
 body{
   --card-border-color: rgba(255, 255, 255, 0.1);
@@ -15,7 +14,8 @@ body{
     line-height: 1.5;
     color: #212529;
     overflow-x: hidden;
-    background: #18181B;
+    background-color: #141E30;
+background: linear-gradient(to right, #24243e, #141E30, #0f0c29);;
 
 }
 
@@ -24,16 +24,15 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
-    
 }
 
 .wrapper{
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
     width: 90%;
     
 }
@@ -46,17 +45,34 @@ body{
     justify-content: space-between;
 }
 
-.pnl-form-title{
-    display: block;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 39px;
-    font-weight: 900;
-    line-height: 1.2;
+
+.pnl-form-title {
+    text-transform: Uppercase;
+    margin-bottom: .5em;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    color: white; 
+    
+     }
+
+    
+    
+    
+    .Heading {
+      
+    
+    font-family: 'Pirata One', cursive;
+    font-size: 3rem;
+    color: #F7971E;
     text-align: center;
-    color: white;
-  
 }
+    
+    .Heading spam {
+      font-size: .5em; 
+    }
+
+
+
 
 .wrap-input{
     background: rgba(255, 255, 255, .015);
@@ -97,10 +113,6 @@ input{
 }
 
 
-
-
-
-
 .container-pnl-output{
     width: 50%;
     display: flex;
@@ -112,6 +124,7 @@ input{
     border-radius: 45px;
     padding: 40px;
     margin-bottom: 32px;
+    height: fit-content;
    
     
 }
@@ -430,7 +443,7 @@ input{
 
     .pnl-form-title{
         margin-top: -0.4em;
-        margin-bottom: -0.7em;
+        margin-bottom: -1em;
     }
 
     .wrap-pnl {
@@ -441,6 +454,11 @@ input{
         padding: 9px 9px 9px;
         margin-bottom: 10px;
         
+    }
+    .Heading{
+        margin-bottom: 0.2em;
+        margin-top: 0.3em;
+        font-size: 2em;
     }
 
     .wrapper{
@@ -456,6 +474,7 @@ input{
     }
     .pnl-form-title{
         padding-bottom: 59px;
+        font-size: 2.5em;
     }
     .button-81{
         margin-top: -4em;
