@@ -38,7 +38,7 @@ slider.addEventListener("input",()=>{
 
 // Position Button
 var long = document.getElementById('long-button');
-long.addEventListener('click', function onClick() {
+long.addEventListener('click', function () {
     long.style.backgroundColor = 'green';
     long.style.color = 'white';
     short.style.backgroundColor = 'white';
@@ -48,7 +48,7 @@ long.addEventListener('click', function onClick() {
   });
 
   var short = document.getElementById('short-button');
-  short.addEventListener('click', function onClick() {
+  short.addEventListener('click', function () {
     short.style.backgroundColor = 'red';
     short.style.color = 'white';
     long.style.backgroundColor = 'white';
