@@ -87,31 +87,9 @@ input{
 
 
 
-.pnl-form-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-    height: 50px;
-    background-color: #333;
-    border-radius: 25px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    border: none;
-    
-}
 
-.container-pnl-form-btn{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    
-}
+
+
 
 .container-pnl-output{
     width: 50%;
@@ -196,9 +174,8 @@ input{
 
 
   .range-slider{
-    
     width: 100%;
-    margin: 2em auto;
+    margin-bottom: 2em ;
     position: relative;
     display: flex;
   }
@@ -258,7 +235,7 @@ input{
     width: 2.8em;
     height: 2em;
     left: 50%;
-    top: -2em;
+    top: -1.6em;
     transform: translate(-50%,-50%);
     background:#090909;
     text-align: center;
@@ -294,9 +271,122 @@ input{
     pointer-events: none;
 }
 
+/* Position button */
+.container-position-setter{
+    width: 100%;
+    display: flex;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+}
+
+.position-button{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
 
 
 
+
+/* CSS */
+
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: white;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+#long-button{
+    background-color: green;
+    color: white;
+}
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #374151;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
+/* CSS */
+
+
+
+
+/* CSS */
+.button-40 {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.button-40:hover {
+  background-color: #374151;
+}
+
+.button-40:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-40 {
+    padding: .75rem 1.5rem;
+  }
+}
 
 
 @media(max-width: 640px) {

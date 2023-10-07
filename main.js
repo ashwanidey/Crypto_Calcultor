@@ -36,7 +36,24 @@ slider.addEventListener("input",()=>{
 })
 
 
+// Position Button
+var long = document.getElementById('long-button');
+long.addEventListener('click', function onClick() {
+    long.style.backgroundColor = 'green';
+    long.style.color = 'white';
+    short.style.backgroundColor = 'white';
+    short.style.color = '#3B3B3B';
 
+    
+  });
+
+  var short = document.getElementById('short-button');
+  short.addEventListener('click', function onClick() {
+    short.style.backgroundColor = 'red';
+    short.style.color = 'white';
+    long.style.backgroundColor = 'white';
+    long.style.color = '#3B3B3B';
+});
 
 
 function calculateQuantity(){
@@ -47,10 +64,16 @@ function calculateQuantity(){
 }
 function calculateProfit(){
     var quantity = (amt.value* lev)/bp.value;
-    p = (sp.value- bp.value) * quantity.toFixed(3);
-    profit.value = p; 
-    return p;
-    
+    if(short.style.backgroundColor === 'red'){
+        p = (bp.value- sp.value) * quantity.toFixed(3);
+        profit.value = p; 
+        return p;
+    }
+    else {
+        p = (sp.value- bp.value) * quantity.toFixed(3);
+        profit.value = p; 
+        return p;
+    }
 }
 
 function calculateMargin(){
