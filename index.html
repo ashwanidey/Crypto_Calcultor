@@ -13,6 +13,8 @@
     
 </head>
 <body class="flex sm:flex-row flex-col">
+
+    <!-- NAV BAR START -->
     
        <!-- For PC -->
         <div class="hidden sm:block m-2 flex flex-col items-center w-[40vh] overflow-hidden text-gray-400 bg-[#040D12] rounded-xl">
@@ -55,7 +57,6 @@
             
         </div>
         
-
         <!-- For mobile -->
 
         <div class="m-2 sm:hidden flex flex-row  items-center sm:w-[40vh]  overflow-y-hidden  text-gray-400 bg-[#040D12] rounded-lg pb-2">
@@ -97,94 +98,96 @@
             </div>
             
         </div>
-        
-       
-        
-    
 
+    <!-- NAV BAR END -->
+        
+    <!-- PNL START-->
     <div class="container-pnl " id="pnl-toogle">
-        <span class="Heading">Futures Calulator</span>
-            
-        
+            <span class="Heading">Futures Calulator</span>
             <span class="pnl-form-title">Profit and Loss</span>
+
             <div class="wrapper">
-                
 
-            <form class="pnl-form" action="" >
+                <!-- FORM START -->
+                <form class="pnl-form" action="" >
 
-                <div class="container-position-setter">
-                    <div id="long-button" class="button-28" role="button">LONG</div>
-                    <div id="short-button" class="button-28" role="button">SHORT</div>
-                </div>
+                    <div class="container-position-setter">
+                        <div id="long-button" class="button-28" role="button">LONG</div>
+                        <div id="short-button" class="button-28" role="button">SHORT</div>
+                    </div>
 
-                <div class="range-slider" id="leverage">
-                    <input type="range" min="1" max="125" value="20" 
-                     class="slider">
+                    <div class="range-slider" id="leverage">
+                        <input type="range" min="1" max="125" value="20" 
+                        class="slider">
+                        
+                        <div class="slider-thumb">
+                            <div class="tooltip"></div>
+                        </div>
+                        <div class="progress"></div>
+                    </div>
+
                     
-                    <div class="slider-thumb">
-                        <div class="tooltip"></div>
+                    <div class="wrap-input">
+                        <span class="label-input">Exit Price</span>
+                        <input type="text" id="sellingPrice" class="input"
+                        placeholder="Enter Selling or Exit price" onkeypress="return isNumberKey(event)">
                     </div>
-                    <div class="progress"></div>
-                </div>
-
-                
-                <div class="wrap-input">
-                    <span class="label-input">Exit Price</span>
-                    <input type="text" id="sellingPrice" class="input"
-                    placeholder="Enter Selling or Exit price" onkeypress="return isNumberKey(event)">
-                </div>
-                <div class="wrap-input">
-                    <span class="label-input">Entry Price</span>
-                    <input type="text" id="buyingPrice" class="input"
-                    placeholder="Enter Buying or Entry Price" onkeypress="return isNumberKey(event)">
-                </div>
-                
-                <div class="wrap-input">
-                    <span class="label-input">Amount Invested</span>
-
-                    <input type="text" id="amount" class="input"
-                    placeholder="Enter Amount Invested" onkeypress="return isNumberKey(event)">
-                </div>
-                
-                <br>
-                
-                <div class="container-pnl-form-btn relative">
-                    <div id="add-button" class="button-81" >
-                        CALCULATE
+                    <div class="wrap-input">
+                        <span class="label-input">Entry Price</span>
+                        <input type="text" id="buyingPrice" class="input"
+                        placeholder="Enter Buying or Entry Price" onkeypress="return isNumberKey(event)">
                     </div>
-                </div>
-            </form>
+                    
+                    <div class="wrap-input">
+                        <span class="label-input">Amount Invested</span>
 
-            
+                        <input type="text" id="amount" class="input"
+                        placeholder="Enter Amount Invested" onkeypress="return isNumberKey(event)">
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="container-pnl-form-btn relative">
+                        <div id="add-button" class="button-81" >
+                            CALCULATE
+                        </div>
+                    </div>
+                </form>
+                <!-- FORM END -->
 
-            <div class="container-pnl-output bg-blue-box">
-                <span class="output-heading">Result</span>
-                <div class="output-box">
-                    <span class="label-output">Initial Margin : </span>
-                    <output id="margin" class="label-output-value">0.00</output>
-                    <span class="label-output-not">USD</span>
-                </div >
-                <div class="output-pnl-box">
-                    <span class="label-output"> PNL : </span>
-                    <output id = "pnl" class="label-output-value">0.00</output>
-                    <span class="label-output-not">USD</span>
-                </div>
-                <div>
-                    <span class="label-output">ROE : </span>
-                    <output id="roe" class="label-output-value">-</output>;
-                    <span class="label-output-not">%</span>
-                </div>
-                <div>
-                    <span class="label-output">Quantity : </span>
-                    <output id="quantity" class="label-output-value">0.00</output>
-                    <span class="label-output-not">BTC</span>
-                </div>
                 
+                <!-- RESULT START -->
+                <div class="container-pnl-output bg-blue-box">
+                        <span class="output-heading">Result</span>
+                        <div class="output-box">
+                            <span class="label-output">Initial Margin : </span>
+                            <output id="margin" class="label-output-value">0.00</output>
+                            <span class="label-output-not">USD</span>
+                        </div >
+                        <div class="output-pnl-box">
+                            <span class="label-output"> PNL : </span>
+                            <output id = "pnl" class="label-output-value">0.00</output>
+                            <span class="label-output-not">USD</span>
+                        </div>
+                        <div>
+                            <span class="label-output">ROE : </span>
+                            <output id="roe" class="label-output-value">-</output>;
+                            <span class="label-output-not">%</span>
+                        </div>
+                        <div>
+                            <span class="label-output">Quantity : </span>
+                            <output id="quantity" class="label-output-value">0.00</output>
+                            <span class="label-output-not">BTC</span>
+                        </div>
+                    
+
+                </div>
+                <!-- RESULT END -->
 
             </div>
-
-        </div>
     </div>
+
+    <!-- PNL END -->
 
     <div class="container-target-price pt-10 hide" id="target-price-toogle">
         

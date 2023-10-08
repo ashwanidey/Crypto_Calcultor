@@ -1,6 +1,5 @@
 var sp = document.getElementById('sellingPrice');
 var bp = document.getElementById('buyingPrice');
-
 var amt = document.getElementById('amount');
 var calButton = document.getElementById('add-button');
 var profit = document.getElementById('pnl');
@@ -13,7 +12,7 @@ var lev;
 
 
 
-// Slider
+// Slider START
 const container = document.querySelectorAll(".range-slider");
 const slider = document.querySelector(".slider");
 const thumb = document.querySelector(".slider-thumb");
@@ -33,10 +32,11 @@ function customSlider(){
 
 customSlider();
 
-
 slider.addEventListener("input",()=>{
     customSlider();
 })
+
+// SLIDER END
 
 
 // Position Button
@@ -58,6 +58,7 @@ long.addEventListener('click', function () {
     long.style.color = '#3B3B3B';
 });
 
+// CALCULATION FUNCTIONS
 
 function calculateQuantity(){
     console.log(lev);
@@ -118,17 +119,21 @@ function calculateRoe(){
     
 }
 
+// CALCULATION FUNCTIONS END
+
+// FORM VALIDATIONS
+
 sp.addEventListener('input', validateInputs);
 bp.addEventListener('input', validateInputs);
 amt.addEventListener('input', validateInputs);
 
 function validateInputs() {
-    // Check if both input fields have a value
+    
     const isInput1Filled = bp.value.trim() !== '';
     const isInput2Filled = sp.value.trim() !== '';
     const isInput3Filled = amt.value.trim() !== '';
 
-    // Enable/disable the submit button based on the conditions
+    
     if(isInput1Filled && isInput2Filled && isInput3Filled){
         calButton.addEventListener("click", calculateProfit);
         calButton.addEventListener("click", calculateMargin);
@@ -137,7 +142,6 @@ function validateInputs() {
     }
     
 }
-
 
 function isNumberKey(event) {
     const charCode = (event.which) ? event.which : event.keyCode;
@@ -148,9 +152,14 @@ function isNumberKey(event) {
     return true;
 }
 
+// FORM VALIDATION END
 
 
 
+
+
+
+// TOOGLE START
 
 var pnlDiv = document.getElementById('pnl-toogle');
 var targetPriceDiv = document.getElementById('target-price-toogle');
@@ -257,6 +266,8 @@ document.getElementById('open-price-tag1').addEventListener('click', function() 
         targetPriceDiv.style.display = 'none';
     } 
 });
+
+// TOGGLE END
 
 
 

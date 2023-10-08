@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body{
   --card-border-color: rgba(255, 255, 255, 0.1);
   --card-box-shadow-1: rgba(0, 0, 0, 0.05);
@@ -8,7 +12,6 @@ body{
   --card-box-shadow-2: rgba(0, 0, 0, 0.1);
   --card-box-shadow-2-y: 8px;
   --card-box-shadow-2-blur: 15px;
-    
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -16,11 +19,22 @@ body{
     overflow-x: hidden;
     background-color: #141E30;
 background: linear-gradient(to right, #24243e, #141E30, #0f0c29);;
-
 }
 
-.container-pnl{
+.Heading {
+    font-family: 'Pirata One', cursive;
+    font-size: 3rem;
+    color: #F7971E;
+    text-align: center;
+}
     
+.Heading spam {
+    font-size: .5em; 
+}
+
+
+
+.container-pnl{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -33,9 +47,10 @@ background: linear-gradient(to right, #24243e, #141E30, #0f0c29);;
 .wrapper{
     display: flex;
     gap: 4rem;
-    width: 90%;
-    
+    width: 90%;  
 }
+
+/* FORM START */
 
 .pnl-form{
     width: 60%;
@@ -45,35 +60,17 @@ background: linear-gradient(to right, #24243e, #141E30, #0f0c29);;
     justify-content: space-between;
 }
 
-
 .pnl-form-title {
     text-transform: Uppercase;
     margin-bottom: .5em;
     font-family: 'Rubik', sans-serif;
     font-size: 3rem;
     color: white; 
-    
-     }
-
-    
-    
-    
-    .Heading {
-      
-    
-    font-family: 'Pirata One', cursive;
-    font-size: 3rem;
-    color: #F7971E;
-    text-align: center;
 }
-    
-    .Heading spam {
-      font-size: .5em; 
-    }
 
 
 
-
+/* INPUT START */
 .wrap-input{
     background: rgba(255, 255, 255, .015);
     position: relative;
@@ -89,7 +86,6 @@ background: linear-gradient(to right, #24243e, #141E30, #0f0c29);;
     font-size: 10px;
     color: rgb(196, 191, 183);
     font-weight: 600;
-    
     line-height: 1.5;
     position: relative;
     text-transform: uppercase
@@ -112,7 +108,9 @@ input{
     height: 40px;
 }
 
+/* INPUT END */
 
+/* OUTPUT START */
 .container-pnl-output{
     width: 50%;
     display: flex;
@@ -129,11 +127,9 @@ input{
     
 }
 
-
 .bg-blue-box {
   position: relative;
 }
-
 
 .bg-blue-box::after {
     position: absolute;
@@ -175,9 +171,9 @@ input{
     color: white;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+/* OUTPUT END */
+
+
 
 .container-target-price{
     display: none;
@@ -219,8 +215,6 @@ input{
 
 
 /* Range Slider */
-
-
 
   .range-slider{
     width: 100%;
@@ -320,6 +314,8 @@ input{
     pointer-events: none;
 }
 
+/* RANGE SLIDER END */
+
 /* Position button */
 .container-position-setter{
     width: 100%;
@@ -334,13 +330,12 @@ input{
     font-weight: 700;
 }
 
+/* POSITION BUTTON END */
 
 
 
-/* CSS */
 
-
-/* CSS */
+/* BUTTONS START */
 .button-28 {
   appearance: none;
   background-color: white;
@@ -388,17 +383,6 @@ input{
   transform: translateY(0);
 }
 
-
-
-/* CSS */
-
-
-
-
-/* CSS */
-
-
-/* CSS */
 .button-81 {
     width: 100%;
   background-color: #fff;
@@ -427,6 +411,9 @@ input{
   background-color: #1e293b;
   color: #fff;
 }
+/* BUTTONS END */
+
+/* MEDIA QUERY START */
 
 @media (min-width: 768px) {
   .button-81 {
@@ -480,3 +467,5 @@ input{
         margin-top: -4em;
     }
 }
+
+/* MEDIA QUERY END */
